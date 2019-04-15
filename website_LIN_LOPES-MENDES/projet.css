@@ -1,0 +1,39 @@
+body {
+	font-family: Verdana, Helvetica, Arial, sans-serif;
+
+	background-color: #F0EFF9;
+	background-image: url('background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.accueil {
+	border: 2px solid black;
+	background-color: rgba(144, 136, 201, 0.8);
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.phrase {
+	margin-top: 3%;
+	padding: 60px;
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
+}
+
+#p {
+	margin-top: 40px;
+	padding: 20px;
+	text-align: center;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,188 @@
+<!-- note pour AILTON : ne pas oublier d'espacer le code pour le rendre plus lisible. -->
+<!-- TUTO ESPACER UN CODE : 
+  -mettre un espace après une virgule (ex : 'je marche, je cours' ET NON 'je marche,je cours')
+  -mettre un espace à gauche et à droite d'un = (ex : '$ex = machin' ET NON '$ex=machin')
+  -mettre un retour à la ligne quand il est nécessaire
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="projet.css">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="inscription.css">
+  <title>Projet C2i : Inscription</title>
+</head>
+
+<body>
+  <div class="accueil">
+    <h1>Inscription d'un candidat</h1>
+  </div>
+
+  <!-- menu déroulant -->
+  <div id="menu">
+    <ul>
+
+      <li class="menu-titre"><a href="projet.php">Accueil</a></li>
+
+      <li class="menu-titre"><a href="#">Candidat</a>
+
+        <ul class="sous-menu">
+          <li><a href="inscription.html">Inscription du candidat</a></li>
+          <li><a href="inscription_epreuve.php">Inscription à une épreuve</a></li>
+          <li><a href="liste_candidats.php">Liste des candidats</a></li>
+          <li><a href="liste_note.php">Notes des candidats</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-titre"><a href="#">Épreuve</a>
+
+        <ul class="sous-menu">
+          <li><a href="notation.php">Noter un candidat</a></li>
+          <li><a href="liste_epreuve.php">Liste des épreuves</a></li>
+          <li><a href="candidat_epreuve.php">Liste des candidats d'une épreuve</a></li>
+          <li><a href="creation_epreuve.php">Création d'une épreuve</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-apropos"><a href="contact.html">Contactez-nous</a></li>
+      <li class="menu-apropos"><a href="a_propos.html">À propos</a></li>
+
+    </ul>
+  </div>
+
+  
+  <!-- formulaire d'inscription -->
+  <br>
+  <form method="POST" action="inscription_insertion.php">
+    
+    <fieldset id="cadre1">
+
+      <legend>Informations personnelles :</legend>
+      <br>
+      <label for="nom">Entrez votre nom :</label>
+      <input type="text" id="nom" name="nom" placeholder="Ex : DUPONT" style="text-transform: uppercase;" required>
+
+      <br>
+      <label for="prenom">Entrez votre prénom :</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Ex : Philibert" required>
+
+      <br>
+      <label for="email">Entrez votre adresse E-mail :</label>
+      <input type="email" id="email" name="adremail" placeholder="Ex : etud@u-pem.fr" required>
+
+    </fieldset>
+
+
+
+    <fieldset id="cadre2">
+
+      <legend>Informations sur la formation suivie :</legend>
+
+      <p>Formation suivie :</p>
+      <label for="aucun" class="formation">Aucune formation</label>
+      <input type="radio" id="aucun" name="formation" value="aucun" required>
+
+      <br>
+      <label for="LMI" class="formation">Licence Mathématiques / Informatique</label>
+      <input type="radio" class="licence" id="LMI" name="formation" value="LMI" required>
+
+      <br>
+      <label for="LPC" class="formation">Licence Physique / Chimie</label>
+      <input type="radio" class="licence" id="LPC" name="formation" value="LPC">
+
+      <br>
+      <label for="SM" class="formation">Master Science Médical</label>
+      <input type="radio" class="master" id="SM" name="formation" value="SM">
+
+      <br>
+      <label for="MITIC" class="formation">Master MITIC</label>
+      <input type="radio" class="master" id="MITIC" name="formation" value="MITIC">
+
+
+      <br>
+      <fieldset id="sous-cadre-licence">
+
+        <legend>Année de formation :</legend>
+
+        <input type="radio" id="l1" name="anneeetud" value="L1">
+        <label for="l1" class="annee_etud">Licence première année</label>
+        <br>
+        <input type="radio" id="l2" name="anneeetud" value="L2">
+        <label for="l2" class="annee_etud">Licence deuxième année</label>
+        <br>
+        <input type="radio" id="l3" name="anneeetud" value="L3">
+        <label for="l3" class="annee_etud">Licence troisième année</label>
+
+      </fieldset>
+
+
+      <fieldset id="sous-cadre-master">
+
+        <legend>Année de formation :</legend>
+
+        <input type="radio" id="m1" name="anneeetud" value="M1">
+        <label for="m1" class="annee_etud">Master première année</label>
+        <br>
+        <input type="radio" id="m2" name="anneeetud" value="M2">
+        <label for="m2" class="annee_etud">Master deuxième année</label>
+
+      </fieldset>
+
+
+      <p>Votre année universitaire actuelle :</p>
+      <label id="an_univ">Entrez votre année universitaire :</label>
+      <input type="number" id="an_univ" name="annee_univ" min="0" max="5" required>
+
+    </fieldset>
+
+
+    <fieldset id="cadre3">
+
+      <legend>Travail extérieur :</legend>
+
+      <p>Avez-vous un travail extérieur ?</p>
+      <label for="oui_siret" class="siret">Oui</label>
+      <input type="radio" id="oui_siret" name="siret" value="oui_siret" required>
+
+      <br>
+      <label for="non_siret" class="siret">Non</label>
+      <input type="radio" id="non_siret" name="siret" value="non_siret">
+
+
+      <br>
+      <fieldset id="sous-cadre-siret">
+
+        <legend>Informations sur l'employeur :</legend>
+
+        <label for="nosiret">N° de Siret :</label>
+        <input type="number" id="nosiret" name="nosiret" min="0">
+
+        <br>
+        <label for="employeur">Nom de l'employeur :</label>
+        <input type="text" id="employeur" name="employeur">
+
+        <br>
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse">
+
+        <br>
+        <label for="telephone">Numéro de téléphone :</label>
+        <input type="tel" id="telephone" name="telephone">
+
+      </fieldset>
+
+    </fieldset>
+
+
+    <br>
+    <input type="submit" value="Valider">
+    <input type="reset" value="Réinitialiser">
+
+  </form>
+
+
+</body>
+</html>

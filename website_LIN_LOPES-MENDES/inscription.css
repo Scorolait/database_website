@@ -1,0 +1,131 @@
+p {
+	text-decoration: underline;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 17px;
+	padding-bottom: 0px;
+	color: #f0f0f5;
+	
+}
+
+fieldset legend {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+label {
+	color: #f0f0f5;
+}
+
+#cadre1, #cadre2, #cadre3 {
+	background-color: rgba(45, 40, 88, 0.5);
+	margin: 20px 10px 0px 10px;
+	padding: 15px 20px 40px;
+}
+
+#cadre1:hover , #cadre2:hover, #cadre3:hover {
+	box-shadow: 0px 0px 10px #444;
+}
+
+/* 1er CADRE */
+#cadre1 input {
+	width: 300px;
+	height: 20px;
+}
+
+#cadre1 label {
+	display: inline-block;
+	width: 280px;
+	padding: 15px 0px;
+}
+
+/* 2eme CADRE */
+#sous-cadre-licence, #sous-cadre-master, #sous-cadre-siret {
+	/*visibility: hidden;*/
+	display: none;
+}
+
+#sous-cadre-licence, #sous-cadre-master, #sous-cadre-siret {
+	background-color: rgba(45, 40, 88, 0.3);
+	margin: 20px 5px;
+	padding: 30px 20px 40px;
+}
+
+#cadre2 .licence:checked ~ #sous-cadre-licence {
+	/*visibility: visible;*/
+	display: inline-block;
+}
+
+#cadre2 .master:checked ~ #sous-cadre-master {
+	/*visibility: visible;*/
+	display: inline-block;
+}
+
+#cadre2 input[type="radio"], #cadre3 input[type="radio"] {
+	width: 17px;
+	height: 17px;
+}
+
+#cadre2 input[type="number"] {
+	width: 40px;
+	height: 20px;
+}
+
+#cadre2 .formation {
+	display: inline-block;
+	width: 350px;
+	padding: 15px 0px;
+}
+
+#cadre2 .annee_etud {
+	display: inline-block;
+	width: 250px;
+	padding: 5px 0px;
+}
+
+#cadre2 #an_univ {
+	width: 50px;
+	padding: 5px 0px;
+}
+
+
+/* 3ème CADRE */
+#cadre3 .siret {
+	display: inline-block;
+	width: 50px;
+	padding: 5px 0px;
+}
+
+#cadre3 #oui_siret:checked ~ #sous-cadre-siret {
+	display: inline-block;
+}
+
+#sous-cadre-siret input {
+	width: 300px;
+	height: 20px;
+}
+
+#sous-cadre-siret label {
+	display: inline-block;
+	width: 200px;
+	padding: 15px 0px;
+}
+
+
+/* BOUTONS */
+input[type="submit"], input[type="reset"] {
+	float: right;
+	padding: 15px;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #e2e3e9;
+	background-color: #424558;
+	text-transform: uppercase;
+	border-radius: 5px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+	box-shadow: 0px 0px 5px #444;
+}
